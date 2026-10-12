@@ -1,0 +1,32 @@
+{
+  "name": "skillswap-platform",
+  "version": "1.0.0",
+  "description": "SkillSwap — AI-Powered Skill-to-Opportunity Platform (Hackathon PS-18)",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue.bold,magenta.bold\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:backend": "npm run dev --workspace=server",
+    "dev:frontend": "npm run dev --workspace=client",
+    "seed": "npm run seed --workspace=server",
+    "build": "npm run build --workspace=client",
+    "build:client": "npm run build --workspace=client",
+    "vercel-build": "npm run build --workspace=client"
+  },
+  "keywords": [
+    "hackathon",
+    "talenttech",
+    "skill-matching",
+    "ai",
+    "pwa",
+    "react",
+    "nodejs",
+    "gemini"
+  ],
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
